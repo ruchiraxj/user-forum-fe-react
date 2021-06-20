@@ -1,0 +1,1 @@
+export const API_URL = "http://localhost/personal/user-forum-be-laravel/public/index.php";

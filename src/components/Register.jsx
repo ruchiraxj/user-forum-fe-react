@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { UserRegister } from "../services/userService";
 import { Input } from "./Input";
+import {toast} from "react-toastify";
 
 
 class Register extends Component {
@@ -24,13 +25,17 @@ class Register extends Component {
   //API call to fetch categories
   async registerUser() {
     try {
-      const categories = await UserRegister(
+      await UserRegister(
         this.state.account.name,
         this.state.account.email,
         this.state.account.password,
         this.state.account.passwordConfirm
       );
-      console.log(categories);
+      
+      toast.success("Successfully Registered. Please login");
+      this.props.history.push('/login');
+      //window.location = "/";
+
     } catch (ex) {
       console.log("error", ex);
     }

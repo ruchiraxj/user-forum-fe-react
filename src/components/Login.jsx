@@ -1,8 +1,8 @@
 import logo from "../logo.svg";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { UserLogin } from "../services/userService";
 import { Input } from "./Input";
+import {login} from "../services/authService";
 
 class Login extends Component {
   state = {
@@ -23,14 +23,17 @@ class Login extends Component {
   //API call to fetch categories
   async loginUser() {
     try {
-      const response = await UserLogin(this.state.account.email, this.state.account.password);
+      const response = await login(this.state.account.email, this.state.account.password);
 
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("name", response.data.name);
       localStorage.setItem("role", response.data.role.name);
 
+      window.location = "/";
     } catch (ex) {
-      console.log("error", ex);
+      if(ex.response && ex.response.status === 401){
+
+      }
     }
   }
 

@@ -1,4 +1,5 @@
 import http from "./httpService";
+import {API_URL} from '../Configs';
 
 export function UserLogin(email, pass){
     
@@ -7,7 +8,7 @@ export function UserLogin(email, pass){
         password: pass
     };
 
-    return http.post('http://localhost/personal/user-forum-be-laravel/public/index.php/api/login', body);
+    return http.post(`${API_URL}/api/login`, body);
 }
 
 export function UserRegister(name, email, pass, pass_confirm){
@@ -19,5 +20,5 @@ export function UserRegister(name, email, pass, pass_confirm){
         password_confirmation: pass_confirm
     };
 
-    return http.post('http://localhost/personal/user-forum-be-laravel/public/index.php/api/register', body);
+    return http.post(`${API_URL}/api/register`, body);
 }
