@@ -25,8 +25,6 @@ class CreatePost extends Component {
   async saveNewPost(){
     try {
       await createPost(this.state.post);
-      let clear = {title:"",description:"",product:""};
-      this.setState({ post: clear});
       toast.success("New post created successfully")
     } catch (ex) {
       if(ex.response && ex.response.status === 422){
