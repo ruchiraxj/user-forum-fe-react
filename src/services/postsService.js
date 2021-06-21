@@ -30,3 +30,7 @@ export function changePostStatus(id, status){
     const stat = {status: status};
     return http.put(`${API_URL}/api/admin/posts/approve/${id}`, stat);
 }
+
+export function searchPosts(key){
+    return http.get(`${API_URL}/api/posts/search?key=${key}`);
+}

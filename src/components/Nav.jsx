@@ -21,7 +21,7 @@ class Nav extends Component {
   render() {
     const { name, role } = this.state;
     return (
-      <nav className="navbar navbar-expand-sm navbar-light bg-light p-2 mb-3">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2 mb-3">
         <Link className="navbar-brand" to="/">
           XYZ
         </Link>

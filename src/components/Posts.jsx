@@ -18,14 +18,15 @@ class Posts extends Component {
       return (
         <div className="card mb-3" key={item.id}>
           <div className="row g-0">
-            <div className="col-3">
+            {/* <div className="col-3">
               <img src={item.product.image} alt="..."/>
-            </div>
-            <div className="col-9">
+            </div> */}
+            <div className="col-12">
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
                 <p className="card-text">{item.description.substring(0, 150)}...</p>
                 <p className="card-text">
+                  <small className="text-muted">Created By: {item.user.name}</small><br/>
                   <small className="text-muted">Created On: {item.created_at}</small>
                 </p>
 
