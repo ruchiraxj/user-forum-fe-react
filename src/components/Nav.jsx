@@ -22,7 +22,7 @@ class Nav extends Component {
     const { name, role } = this.state;
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2 mb-3">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/posts">
           XYZ
         </Link>
         <button
@@ -41,7 +41,7 @@ class Nav extends Component {
           {name && (
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/posts">
                   Home
                 </Link>
               </li>
@@ -72,7 +72,7 @@ class Nav extends Component {
             {name && (
               <React.Fragment>
                 <li>
-                  <Link className="nav-link text-warning" to="/">
+                  <Link className="nav-link text-warning" to="/posts">
                     {name}, You are logged in as {role}
                   </Link>
                 </li>

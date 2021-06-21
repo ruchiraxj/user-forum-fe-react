@@ -30,7 +30,7 @@ function App() {
           <Route path="/posts/create" component={CreatePost}></Route>
           <Route path="/posts/:id" component={PostView}></Route>
           <Route path="/posts" component={Home}></Route>
-          <Route path="/" component={Home}></Route>
+          <Route path="/" component={Login}></Route>
 
 
         </Switch>

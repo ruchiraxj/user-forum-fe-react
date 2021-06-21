@@ -29,7 +29,7 @@ class Login extends Component {
       localStorage.setItem("name", response.data.name);
       localStorage.setItem("role", response.data.role.name);
 
-      window.location = "/";
+      window.location = "/posts";
     } catch (ex) {
       if(ex.response && ex.response.status === 401){
 

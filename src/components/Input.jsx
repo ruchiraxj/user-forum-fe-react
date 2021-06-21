@@ -21,7 +21,7 @@ export const Textarea = (props) => {
   return (
     <div className="form-group mb-3">
       <label htmlFor={props.name} className="form-label">{props.label}</label>
-      <textarea className="form-control" id={props.name} name={props.name} onChange={props.onChange} rows="5" placeholder={props.label}>{props.value}</textarea>
+      <textarea className="form-control" id={props.name} name={props.name} onChange={props.onChange} rows="5" placeholder={props.label} value={props.value}></textarea>
     </div>
   );
 };
