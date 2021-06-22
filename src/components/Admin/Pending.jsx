@@ -17,7 +17,9 @@ class Pending extends Component {
     try {
       const p = await pendingPosts();
       this.setState({ posts: p.data });
-    } catch (ex) {}
+    } catch (ex) {
+      this.setState({ posts: [] });
+    }
   }
 
 
